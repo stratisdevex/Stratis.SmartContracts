@@ -36,7 +36,7 @@ namespace Stratis.SmartContracts
             if (vch.Length > this.width)
                 throw new FormatException($"The byte array should be {this.width} bytes or less.");
 
-            SetValue(new BigInteger(vch, true, !lendian));
+            SetValue(new BigInteger(vch));
         }
 
         public UIntBase(int width, string str) : this(width)
@@ -59,7 +59,7 @@ namespace Stratis.SmartContracts
             for (int i = 0; i < length; i++)
                 BitConverter.GetBytes(array[i]).CopyTo(bytes, i * 4);
 
-            SetValue(new BigInteger(bytes, true));
+            SetValue(new BigInteger(bytes));
         }
 
         private bool TooBig(byte[] bytes)
