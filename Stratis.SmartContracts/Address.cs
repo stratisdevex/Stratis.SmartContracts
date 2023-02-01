@@ -2,6 +2,7 @@
 
 namespace Stratis.SmartContracts
 {
+    #pragma warning disable CS0659, CS0661
     /// <summary>
     /// Represents an address used when sending or receiving funds.
     /// </summary>
@@ -112,4 +113,5 @@ namespace Stratis.SmartContracts
             return equals;
         }
     }
+    #pragma warning restore CS0659, CS0661
 }
